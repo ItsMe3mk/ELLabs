@@ -1,0 +1,154 @@
+header{
+    display:flex;
+    position:fixed;
+    flex-direction: row;
+    background-color: #1c1c1c;
+    right:0;
+    top:0;
+    left:0;
+    height:100px;
+    align-items: center;
+    justify-content: space-between;
+    z-index:100;
+}
+.header-left-section{
+    position: relative;
+    min-width: 200px;
+}
+.full-name-cover{
+    position: absolute;
+    top:10px;
+    right:200px;
+    height:50px;
+    background-color: #1c1c1c;
+    width:400px;
+}
+.full-name{
+    opacity:0;
+    margin:0;
+    padding:0;
+    font-size: 24px;
+    color:White;
+    position: absolute;
+    top:20px;
+    left:20px;
+    z-index:-1;
+}
+.full-name span{
+    color:#ff6600;
+}
+@keyframes name-animation-cover{
+    0% {
+        width:400px;
+    }
+    15%{
+        width:0px;
+    }
+    25%{
+        width:0px;
+    }
+    50%{
+        width:400px;
+    }
+    100%{
+        width:400px;
+    }
+}
+.logo-background{
+    width:180px;
+    height:75px;
+    position:absolute;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.904),rgba(28, 28, 28, 0.945));
+    border-radius: 100px;
+    filter : blur(10px);
+    margin-left: 0;   
+
+}
+
+.logo{
+    width:180px;
+    cursor:pointer;
+    position:relative;
+    z-index: 1;
+    margin-left: 0;
+
+}
+@keyframes logo-animation{
+    0%{
+        margin-left:0;
+    }
+    15%{
+        margin-left:400px;
+    }
+    25%{
+        margin-left: 400px;
+    }
+    50%{
+        margin-left:0;
+    }
+    100%{
+        margin-left:0;
+    }
+}
+@media(min-width:1250px){
+    .header-left-section{
+    min-width:600px;
+    }
+    .full-name-cover{
+    animation-name: name-animation-cover;
+    animation-duration:15s;
+    animation-iteration-count:infinite;
+    animation-delay: 3s;
+    }
+    .logo-background,.logo{
+    animation-name:logo-animation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite; 
+    animation-delay:3s;
+    }
+    .full-name{
+        opacity:1;
+    }
+    
+}
+
+.header-right-section{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    min-width:550px;
+    margin-right:20px;
+    gap: 20px;
+
+}
+.buttons-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    color:white;
+    background-color: #ff6600;
+    font-size: 20px;
+    font-weight: 100;
+    border:0;
+    border-radius: 100px;
+    padding:10px 15px;
+    cursor:pointer;
+    transition: background-color 0.4s, color 0.4s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.buttons:hover{
+    background-color: white;
+    color:#ff6600;
+    border : 1px solid #ff6600;
+    padding: 9px 14px;
+}
+.buttons img{
+    width: 25px;
+    margin-right:10px;
+}

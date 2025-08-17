@@ -1,0 +1,88 @@
+img{
+    width:150px;
+    transition: all 0.5s;
+}
+label{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.in-page{
+    display:flex;
+    margin-top:200px;
+    margin-right:20px;
+    margin-left:20px;
+    gap:100px;
+    width:auto;
+    height:100%;
+}
+.left-section,.right-section{
+    width: 400px;
+    height:300px;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.left-section{
+    background-color: rgb(255, 255, 255);
+    border:1px solid #ff660081;
+    border-radius:4px;
+}
+.phone-img:hover{
+    width:200px;
+}
+.phone-click:checked ~.phone-number{
+    opacity:1;
+}
+.phone-number{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:4px;
+    opacity:0;
+    background-color: #ff6600;
+    padding:5px;
+    border-radius:8px;
+    color:white;
+    transition:all 0.5s;
+    width:150px;
+    pointer-events:none;
+}
+.phone-number img{
+    width:24px;
+}
+
+.right-section{
+    background-color: #ff6600;
+    border-radius:4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-img:hover{
+    width:200px;
+}
+.gmail-click:checked ~.gmail{
+    opacity:1;
+}
+.gmail{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:4px;
+    opacity:0;
+    background-color: white;
+    padding:5px 15px;
+    border-radius:8px;
+    color:#ff6600;
+    transition:all 0.5s;
+    max-width:150px;
+    pointer-events:none;
+}
+.gmail img{
+    width:24px;
+}
+
